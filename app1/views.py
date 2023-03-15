@@ -30,11 +30,11 @@ from .models import Student
 # -- 5Xx - 500 -- server side error
 
 # for not showing error on client side make debug equal to false in setting.py showing error massage only
-
 # Queary params - Queary parameters :- it will use in urls for geting expected output if get more info then add after and 
 #                                      you will get the all qyeary paramaters output
 
 
 def welcome(request):
+    print(request.user)
     return render(request,"home.html")
 
