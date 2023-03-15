@@ -420,3 +420,9 @@ SECOND_DATABASE = "second_db"
 
 # dept = Subjects.objects.using(SECOND_DATABASE).all()
 # print(dept)
+
+from django.db import connection
+cursor = connection.cursor()
+cursor.execute('''SELECT * FROM student where id > 8''')
+data = cursor.fetchall(3)
+print(data)
